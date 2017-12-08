@@ -6,12 +6,12 @@ import * as jsonMiddleware from 'koa-json';
 import * as loggerMiddleware from 'koa-bunyan-logger';
 
 
-import requestMiddleware from './middleware/request';
-import errorMiddleware from './middleware/error';
+import requestMiddleware from './api/middlewares/request';
+import errorMiddleware from './api/middlewares/error';
 
-import routeMiddleware from './route';
+import routeMiddleware from './api/routes';
 
-import conf from './conf';
+import conf from './config';
 
 const app = new Koa();
 const d = debug('kickstarter:root');
